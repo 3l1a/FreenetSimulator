@@ -283,7 +283,7 @@ public class FreenetProtocol implements EDProtocol {
 			 * is considered a positive result and routing ends.
 			 */
 			if (message.getSender() == node_) {
-				StatControl.numResponsePositive++;
+				StatControl.numPositiveResponse++;
 				return;
 			}
 
