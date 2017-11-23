@@ -555,15 +555,6 @@ public class FreenetProtocol implements EDProtocol {
 	}
 
 	/**
-	 * Add node id.
-	 * @param node_
-	 * @param id_
-	 */
-	public void addNeighborId(Node node_, BigInteger id_) {
-		NeighborsIds.put(node_, id_);
-	}
-
-	/**
 	 * Update id of a neighbor. Useful in swap context.
 	 *
 	 * @param node_
