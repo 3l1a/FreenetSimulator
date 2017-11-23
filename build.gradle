@@ -1,0 +1,67 @@
+import java.nio.file.Paths
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs 'src/'
+        }
+    }
+
+//    test {
+//        java {
+//            srcDir 'src/test/java'
+//        }
+//    }
+}
+
+
+dependencies {
+//    testCompile 'junit:junit:4.12'
+//    compile 'com.google.guava:guava:18.0'
+//    compile 'org.javatuples:javatuples:1.2'
+//    compile files("src")
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+mainClassName = "peersim.Simulator"
+
+task(simulate, dependsOn: 'classes', type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'peersim.Simulator'
+    args = ["./run/Freenet.cfg"]
+}
+
+//task(rmcfg, type: Delete) {
+//    delete fileTree('run/') {
+//        include '*.cfg'
+//    }
+//}
+
+task printClasspath {
+    doLast {
+        configurations.testRuntime.each { println it }
+    }
+}
+
+task(confgen, dependsOn: ['classes'], type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+task runAll(dependsOn: ['classes', 'confgen']) {
+    fileTree(dir: 'run/', include:'*.cfg').each { file ->
+        doLast {
+            javaexec {
+                classpath = sourceSets.main.runtimeClasspath
+                main = 'peersim.Simulator'
+                args = ["run/$file.name"]
+            }
+        }
+    }
+}

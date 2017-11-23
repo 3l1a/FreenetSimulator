@@ -1,0 +1,11 @@
+Each dataset contains pairs of identifies idA,IdB defining undirecred friendship relation between the users identified by idA and idB.
+
+The smaller Facebook dataset (FacebookDataset_Small.csv) should be used in order to facilitate the debugging/development of the simulation while the larger Facebook dataset must be used for experimantal purposes. 
+
+FacebookDataset_Small.csv:  (a debugging dataset)
+Number of users: 198
+Friendships: 951
+
+FacebookDataset_Large.csv:
+Numer of users: 7190
+Friendships: 44183
