@@ -170,7 +170,7 @@ public class StatControl implements Control {
 							+ elem.elem2+ " \n");
 				}
 				b.close();
-
+e
 
 			} catch (IOException e) {
 				e.printStackTrace();
