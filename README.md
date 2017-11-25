@@ -22,8 +22,8 @@ cd FreenetSimulator/
 
 change the file ./run/Freenet.cfg. The file itself contains a working model and some instructions about how to compile it.
 Inside the directory ./run/Dataset it is possible to find 3 samples of overlay with different sizes. 
-It is possible to choose the overlay by modify the Freenet.cfg being careful to correctly set the size of the overlay.
-Execute with
+It is possible to choose the overlay by modifying the Freenet.cfg, being careful to correctly set the size of the overlay.
+Execute with:
 
 ```bash
 gradle wrapper
