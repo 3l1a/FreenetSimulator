@@ -14,10 +14,6 @@ sourceSets {
     }
 }
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '3.3'
-}
-
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
@@ -30,7 +26,6 @@ task(simulate, dependsOn: 'classes', type: JavaExec) {
     args = ["./run/Freenet.cfg"]
 }
 
-
 task printClasspath {
     doLast {
         configurations.testRuntime.each { println it }
@@ -41,3 +36,6 @@ task(confgen, dependsOn: ['classes'], type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
 }
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.3'
+}

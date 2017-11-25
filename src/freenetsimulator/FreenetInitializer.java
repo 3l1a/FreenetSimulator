@@ -20,7 +20,7 @@ public class FreenetInitializer implements Control {
 
 		@Override
         public boolean execute() {
-            HashMap<BigInteger, Node> hashmap = new HashMap<BigInteger, Node>();
+            HashMap<BigInteger, Node> hashmap = new HashMap<>();
             int index = 0;
             BufferedReader br = null;
             String line = "";

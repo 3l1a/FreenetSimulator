@@ -40,6 +40,8 @@ public class StatControl implements Control {
 	protected File fHDone;
 	protected File fStoreDistances;
 
+	protected static final int sampleSize = Configuration.getInt("stat_sample_size");
+
 	/*
     * Because of files requested are always present in the network, failures
     * are always TTL Expiration.
@@ -70,7 +72,7 @@ public class StatControl implements Control {
 
 	protected static synchronized void handleResults(GetRoutingEntry re, ResponseType type) {
 
-		if (lastEvents.size() == 1000){
+		if (lastEvents.size() == sampleSize){
 			if (print_begin){
 				System.out.println("############## STATS AFTER SIMULATION BEGINNING ################");
 				printStats();
@@ -170,7 +172,7 @@ public class StatControl implements Control {
 							+ elem.elem2+ " \n");
 				}
 				b.close();
-e
+
 
 			} catch (IOException e) {
 				e.printStackTrace();

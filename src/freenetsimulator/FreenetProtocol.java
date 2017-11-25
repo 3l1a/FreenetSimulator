@@ -44,23 +44,23 @@ public class FreenetProtocol implements EDProtocol {
 		prefix = prefix_;
 		id = null;
 		replication = Configuration.getInt(prefix_ + ".replication");
-		Neighbors = new ArrayList<Node>();
-		NeighborsIds = new HashMap<Node, BigInteger>();
-		StoreElements = new LinkedHashMap<BigInteger, Content>();
-		putRoutingTable = new LinkedHashMap<Long, PutRoutingEntry>();
-		getRoutingTable = new LinkedHashMap<Long, GetRoutingEntry>();
-		swapRoutingTable = new LinkedHashMap<Long, SwapRoutingEntry>();
+		Neighbors = new ArrayList<>();
+		NeighborsIds = new HashMap<>();
+		StoreElements = new LinkedHashMap<>();
+		putRoutingTable = new LinkedHashMap<>();
+		getRoutingTable = new LinkedHashMap<>();
+		swapRoutingTable = new LinkedHashMap<>();
 	}
 
 	@Override
 	public Object clone() {
 		FreenetProtocol fn = new FreenetProtocol(prefix);
-		fn.Neighbors = new ArrayList<Node>();
-		fn.NeighborsIds = new HashMap<Node, BigInteger>();
-		fn.StoreElements = new LinkedHashMap<BigInteger, Content>();
-		fn.putRoutingTable = new LinkedHashMap<Long, PutRoutingEntry>();
-		fn.getRoutingTable = new LinkedHashMap<Long, GetRoutingEntry>();
-		fn.swapRoutingTable = new LinkedHashMap<Long, SwapRoutingEntry>();
+		fn.Neighbors = new ArrayList<>();
+		fn.NeighborsIds = new HashMap<>();
+		fn.StoreElements = new LinkedHashMap<>();
+		fn.putRoutingTable = new LinkedHashMap<>();
+		fn.getRoutingTable = new LinkedHashMap<>();
+		fn.swapRoutingTable = new LinkedHashMap<>();
 		return fn;
 	}
 
