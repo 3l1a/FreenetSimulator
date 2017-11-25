@@ -16,7 +16,7 @@ This software aims to simulate the protocol and analyze the efficiency of search
 ## Usage
 
 ```bash
-git clone i
+git clone https://github.com/3l1a/FreenetSimulator
 cd FreenetSimulator/
 ```
 
