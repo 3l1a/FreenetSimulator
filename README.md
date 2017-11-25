@@ -2,7 +2,7 @@ FREENET SIMULATOR
 =============
 
 This software is a simulation of the Freenet protocol v. 0.7 ([Freenet Project](https://freenetproject.org/pages/about.html))
-The project is written in Java ad use the Peersim Simulator ([Official Web](http://peersim.sourceforge.net/)).
+The project is written in Java ad uses the Peersim Simulator ([Official Web](http://peersim.sourceforge.net/)).
 
 ## Simulation
 
@@ -20,10 +20,10 @@ git clone i
 cd FreenetSimulator/
 ```
 
-change the file ./run/Freenet.cfg. The file itself contains a working model and some instructions about hot to compile it.
-Execute with. Inside the directory ./run/Dataset it is possible to find 3 samples of overlay with different sizes. 
+change the file ./run/Freenet.cfg. The file itself contains a working model and some instructions about how to compile it.
+Inside the directory ./run/Dataset it is possible to find 3 samples of overlay with different sizes. 
 It is possible to choose the overlay by modify the Freenet.cfg being careful to correctly set the size of the overlay.
-Then, in order to execute:
+Execute with
 
 ```bash
 gradle wrapper
